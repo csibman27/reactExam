@@ -15,6 +15,8 @@ import AddToFavouritesIcon from '../components/cardIcons/addToFavourites'
 
 // const url = 'https://api.themoviedb.org/3/trending/movie/day?language=en-US'
 
+// https://api.themoviedb.org/3/trending/movie?api_key=900bc650534ac4e5a5ca7bc779a2792a&language=en-US&include_adult=false&include_video=false&page=1
+
 const titleFiltering = {
   name: "title",
   value: "",
@@ -62,7 +64,7 @@ const TrendingPage: React.FC = () => {
   return (
     <>
       <PageTemplate
-        title="Discover Movies"
+        title="Trending Movies"
         movies={displayedMovies}
         action={(movie: BaseMovieProps) => {
           return <AddToFavouritesIcon {...movie} />

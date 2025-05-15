@@ -12,6 +12,9 @@ import { useQuery } from "react-query";
 import Spinner from "../components/spinner";
 import AddToFavouritesIcon from '../components/cardIcons/addToFavourites'
 
+
+// const url = 'https://api.themoviedb.org/3/trending/movie/day?language=en-US'
+
 const titleFiltering = {
   name: "title",
   value: "",
@@ -49,6 +52,12 @@ const TrendingPage: React.FC = () => {
 
   const movies = data ? data.results : [];
   const displayedMovies = filterFunction(movies);
+
+  React.useEffect(() => {
+    if (data) {
+      console.log("Endpoint logt:", data.results);
+    }
+  }, [data]);
 
   return (
     <>

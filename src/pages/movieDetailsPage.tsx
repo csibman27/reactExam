@@ -24,6 +24,10 @@ const MovieDetailsPage: React.FC= () => {
     return <h1>{(error as Error).message}</h1>;
   }
 
+   
+  console.log("Endpoint log:", movie);
+ 
+
   return (
     <>
       {movie ? (

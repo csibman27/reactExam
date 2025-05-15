@@ -31,6 +31,18 @@ const styles = {
     },
 };
 
+
+// Part B.
+// Original Language:
+
+// A movie’s attributes include the Original Language (the original_language attribute).
+// You are required to modify the relevant component code so that the details page render this information, as illustrated below.
+
+// (Git) After completing the above implementation, commit the changes using the commit message
+// "Added Original Language attribute".
+
+
+
 const MovieDetails: React.FC<MovieDetailsProps> = (movie) => {
 
     const [drawerOpen, setDrawerOpen] = useState(false); // New
@@ -66,6 +78,8 @@ const MovieDetails: React.FC<MovieDetailsProps> = (movie) => {
                     label={`${movie.vote_average} (${movie.vote_count}`}
                 />
                 <Chip label={`Released: ${movie.release_date}`} />
+                {/* original_language */}
+                <Chip label={`Original Language: ${movie.original_language}`} />
             </Paper>
             <Fab
                 color="secondary"

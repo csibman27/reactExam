@@ -55,11 +55,11 @@ const TrendingPage: React.FC = () => {
   const movies = data ? data.results : [];
   const displayedMovies = filterFunction(movies);
 
-  React.useEffect(() => {
-    if (data) {
-      console.log("Endpoint logt:", data.results);
-    }
-  }, [data]);
+  // React.useEffect(() => {
+  //   if (data) {
+  //     console.log("Endpoint logt:", data.results);
+  //   }
+  // }, [data]);
 
   return (
     <>
